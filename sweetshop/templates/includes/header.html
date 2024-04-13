@@ -1,0 +1,17 @@
+<div class="header_text" text-align="right">Missis Vanilka</div>
+<div>
+<ul class="mainmenu">
+
+
+    {% block mainmenu %}
+            <li><a href="#">Примеры работ</a></li>
+            <li><a href="#">Начинки</a></li>
+            <li><a href="#">Конструктор торта</a></li>
+            <li><a href="#">Заказ по фото</a></li>
+            <li><a href="{% url 'feedback:reviews' %}">Отзывы</a></li>
+            <li><a href="{% url 'feedback:about' %}">Обо мне</a></li>
+            <li><a href="{% url 'feedback:contact' %}">Контакты</a></li>
+
+      {% endblock mainmenu %}
+        </ul>
+          <div class="clear"></div></div>
