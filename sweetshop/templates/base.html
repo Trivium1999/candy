@@ -1,4 +1,5 @@
 {% load static %}
+{% load my_custom_tags %}
 <!DOCTYPE html>
 <html>
 <head>    
@@ -10,12 +11,15 @@
 
 <div class="wrapper">
     <div class="page">
-
         <div class="header">
             {% include 'includes/header.html' %}
         </div>
+
 <br>
 <br>
+{% block tags_menu %}
+    <div class="tags_menu"></div>
+{% endblock %}
             <div class="content">  
             {% block content %}
             {% endblock %}

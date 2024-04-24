@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="title_for_example">
+    {{ examples.title }}
+</div>
+
+<div class="example_desserts">
+
+        {% for example in examples.decorations.all %}
+        <div class="example_dessert_card">
+            <div class="dessert_card__image-wrapper">
+                    <img class="index_image" src="{{ example.image.url }}">
+            </div>
+    
+            <!-- <div class="example_card_title">{{ example.title }}</div> -->
+            
+        </div>
+        {% endfor %}
+</div>
+{% endblock %}

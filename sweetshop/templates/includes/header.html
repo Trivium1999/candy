@@ -1,17 +1,18 @@
 <div class="header_text" text-align="right">Missis Vanilka</div>
+{% block mainmenu %}
 <div>
-<ul class="mainmenu">
-
-
-    {% block mainmenu %}
-            <li><a href="#">Примеры работ</a></li>
-            <li><a href="#">Начинки</a></li>
+  <ul class="mainmenu">
+            <li><a href="{% url 'desserts:index' %}">Примеры работ</a></li>
+            <li><a href="{% url 'desserts:filling' %}">Начинки</a></li>
             <li><a href="#">Конструктор торта</a></li>
             <li><a href="#">Заказ по фото</a></li>
             <li><a href="{% url 'feedback:reviews' %}">Отзывы</a></li>
             <li><a href="{% url 'feedback:about' %}">Обо мне</a></li>
             <li><a href="{% url 'feedback:contact' %}">Контакты</a></li>
-
-      {% endblock mainmenu %}
-        </ul>
-          <div class="clear"></div></div>
+          {% if request.user.is_authenticated %}
+            <li><a href="{% url 'desserts:tags' %}">Теги</a></li>
+          {% endif %}
+  </ul>
+</div>
+{% endblock mainmenu %}
+          <div class="clear"></div>

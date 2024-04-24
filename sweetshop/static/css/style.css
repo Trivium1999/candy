@@ -92,22 +92,22 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
     text-shadow: 2px 2px 2px #be0160;
 }
 
-.wrapper_create_wish {
+/* .wrapper_create_wish {
     background-color: #f0f1ca;
     width: auto;
     max-width: 100%;
     margin: 0 auto;
     border-radius: 20px;
     padding: 20px;
-}
+} */
 
-.create_wish {
+/* .create_wish {
     margin-top: 10px;
     font-family: Comic Sans MS, Tahoma, Arial;
     
-}
+} */
 
-.wrapper_details {
+/* .wrapper_details {
     display: grid;
     grid-template-columns: 300px auto;
     grid-gap: 15px;
@@ -130,6 +130,14 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
     margin-left: 15px;
     font-size: 16px;
     font-family: Comic Sans MS, Tahoma, Arial;
+} */
+
+
+/* Index */
+
+.index_desserts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .dessert_card {
@@ -142,8 +150,8 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
 }
 
 .dessert_card .dessert_card__image-wrapper {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     margin-bottom: 20px;
 }
 .dessert_card .dessert_card__image-wrapper img {
@@ -151,6 +159,27 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
     height: 100%;
     object-fit: cover;
 }
+
+.index_desserts .pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, .8);
+
+}
+
+.index_desserts .pop-up img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px, solid #fffafd;
+    border-radius: 20px;
+    width: 500px;
+}
+
 
 .index_title {
     text-align: center;
@@ -170,11 +199,80 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
     background-color: #f7cfe9;
 }
 
-.index_desserts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* Filling */
+
+.dessert_filling_card {
+    margin: 5px;
+    background-color: #fffafd;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #ffaed4;
 }
 
+.dessert_filling_card .dessert_filling__image-wrapper {
+    width: 200px;
+    height: 200px;
+}
+.dessert_filling_card .dessert_filling__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title_filling {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: Comic Sans MS, Tahoma, Arial;
+    color: rgb(112, 32, 63);
+    text-shadow: 2px 2px 2px #f5c7df;
+}
+
+.filling_description {
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: Comic Sans MS, Tahoma, Arial;
+}
+
+/* Examples */
+
+.example_desserts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.title_for_example {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    font-size: 28px;
+    font-family: Comic Sans MS, Tahoma, Arial;
+    color: rgb(250, 175, 204);
+    text-shadow: 2px 2px 2px #8f2551;
+}
+
+.example_dessert_card {
+    margin: 5px;
+    background-color: #fffafd;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #ffaed4;
+}
+
+.example_dessert_card .dessert_card__image-wrapper {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+.example_dessert_card .dessert_card__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Пагинация */
 
 .list-pages {
     text-align: center;
@@ -220,43 +318,4 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
 
 .list-pages .page-num-selected:hover {
 	box-shadow: none; 
-}
-
-
-.detail_update_delete {
-    text-align: center;
-    text-align-last: left;
-}
-
-.detail_update_delete_btn {
-    background-color: #fffd9c;
-    padding: 10px 10px;
-    text-decoration: None;
-    font-size: 18px;
-    font-family: Comic Sans MS, Tahoma, Arial;
-    color: #70511b;
-    border-radius: 5px;
-}
-
-.detail_update_delete_btn:hover {
-    background-color: #fffd9c;
-}
-
-.create-update-delete {
-    text-align: center;
-    text-align-last: left;
-}
-
-.create-update-delete-btn {
-    background-color: #fffd9c;
-    padding: 3px 3px;
-    text-decoration: None;
-    font-size: 14px;
-    font-family: Comic Sans MS, Tahoma, Arial;
-    color: #70511b;
-    border-radius: 5px;
-}
-
-.create-update-delete-btn:hover {
-    background-color: #fffd9c;
 }

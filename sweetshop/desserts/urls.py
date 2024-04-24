@@ -6,8 +6,9 @@ app_name = 'list'
 
 urlpatterns = [
     path('', index, name='index'), # виды десертов с подписями и фотографиями
-    # path('wish_user/<int:author_id>/', WishesForUser.as_view(), name='all_wish'),
-    # path('about/', about, name='about'),
+    path('tags/', tags, name='tags'),
+    path('examples/<int:id>/', examples, name='example'),
+    path('filling/', filling, name='filling')
     # path('create/', CreateWish.as_view(), name='create'),
     # path('edit/<int:wish_pk>/', UpdateWish.as_view(), name='edit_wish'),
     # path('delete/<int:wish_pk>/', DeleteWish.as_view(), name='delete_wish'),

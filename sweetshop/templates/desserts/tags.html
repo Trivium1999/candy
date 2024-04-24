@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for tag in tags %}
+        <div class="title_details">
+            {{ tag.title }}
+        </div>
+    {% endfor %}
+{% endblock %}

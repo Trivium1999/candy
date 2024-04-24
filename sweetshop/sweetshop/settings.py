@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'desserts.apps.DessertsConfig',
-    'feedback.apps.FeedbackConfig'
+    'feedback.apps.FeedbackConfig',
+    'constructor.apps.ConstructorConfig'
 ]
 
 MIDDLEWARE = [

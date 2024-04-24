@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="title_for_example">
+    {{ fillings.title }}
+</div>
+
+<div class="example_desserts">
+
+        {% for filling in fillings %}
+        <div class="dessert_filling_card">
+            <div class="dessert_filling__image-wrapper">
+                    <img class="index_img" src="{{ filling.image.url }}">
+            </div>
+    
+            <div>   
+                <span class="title_filling">{{ filling.title }} </span>
+                <p class="filling_description">{{ filling.description }}</p>
+             </div>    
+            
+        </div>
+        {% endfor %}
+</div>
+{% endblock %}
