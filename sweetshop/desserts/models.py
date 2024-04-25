@@ -33,7 +33,7 @@ class Decorations(models.Model):
 
 
 class ExampleFilling(models.Model):
-    image = models.ImageField(upload_to='image/fillings/example/', null=True)
+    # image = models.ImageField(upload_to='image/fillings/example/', null=True)
     title = models.CharField(max_length=150)
     fillings = models.ManyToManyField('Fillings', blank=True, related_name='examples')
     # slug = models.SlugField(max_lenght=150, unique=True)

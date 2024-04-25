@@ -13,6 +13,6 @@ def contact(request):
 
 
 def reviews(request):
-    all_reviews = Reviews
-    context = {'title': 'Отзывы', 'heading': 'Отзывы'}
+    reviews = Reviews.objects.all()
+    context = {'title': 'Отзывы', 'heading': 'Отзывы', 'reviews': reviews}
     return render(request, 'feedback/reviews.html', context)

@@ -1,12 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import TemplateView
 from .models import Decorations, Fillings, ExampleDecoration, ExampleFilling
 
 
-def index(request):
-    example = ExampleDecoration.objects.all()
-    decor = Decorations.objects.all()
-    context = {'decor': decor, 'example': example}
-    return render(request, 'desserts/index.html', context)
+class Index(TemplateView):
+    template_name = 'desserts/index.html'
+    extra_context = {'decor': Decorations.objects.all()}
 
 
 def tags(request):
@@ -16,12 +15,10 @@ def tags(request):
 
 
 def examples(request, id):
-    examples = Decorations.objects.get(id=id)
-    context = {'examples': examples}
-    return render(request, 'desserts/examples.html', context)
+    objects = Decorations.objects.get(id=id)
+    return render(request, 'desserts/examples.html', {'objects': objects})
 
 
 def filling(request):
-    fillings = Fillings.objects.all()
-    context = {'fillings': fillings}
-    return render(request, 'desserts/filling.html', context)
+    objects = Fillings.objects.all()
+    return render(request, 'desserts/filling.html', {'objects': objects})

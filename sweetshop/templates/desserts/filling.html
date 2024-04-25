@@ -1,21 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
 <div class="title_for_example">
-    {{ fillings.title }}
+    {{ objects.title }}
 </div>
 
-<div class="example_desserts">
-
-        {% for filling in fillings %}
+<div class="filling_example">
+    
+    <div class="sidenav">
+    
+    <span>Начинка для торта</span>
+    
+    </div>
+        {% for obj in objects %}
         <div class="dessert_filling_card">
             <div class="dessert_filling__image-wrapper">
-                    <img class="index_img" src="{{ filling.image.url }}">
+                    <img class="index_img" src="{{ obj.image.url }}">
             </div>
     
             <div>   
-                <span class="title_filling">{{ filling.title }} </span>
-                <p class="filling_description">{{ filling.description }}</p>
+                <span class="title_filling">{{ obj.title }} </span>
+                <p class="filling_description">{{ obj.description }}</p>
              </div>    
             
         </div>

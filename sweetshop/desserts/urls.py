@@ -5,7 +5,7 @@ from .views import *
 app_name = 'list'
 
 urlpatterns = [
-    path('', index, name='index'), # виды десертов с подписями и фотографиями
+    path('', Index.as_view(), name='index'), # виды десертов с подписями и фотографиями
     path('tags/', tags, name='tags'),
     path('examples/<int:id>/', examples, name='example'),
     path('filling/', filling, name='filling')

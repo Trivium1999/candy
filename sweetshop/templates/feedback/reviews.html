@@ -4,4 +4,20 @@
 
 <div class="title_details">{{title}}</div>
 
+<div class="review">
+
+{% for review in reviews %}
+    <div class="review_card">
+        <div class="card_img">
+            <img src="{{ review.image.url }}" alt="Отзыв">
+        </div>
+    </div>
+    
+    <div class="pop-up">
+        <span>&times;</span>
+        <img src="{{review.image.url}}" alt="Отзыв">
+    </div>
+    {% include 'includes/open_image.html' %}
+    {% endfor %}
+</div>
 {% endblock %}

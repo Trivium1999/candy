@@ -6,3 +6,7 @@ class Reviews(models.Model):
     image = models.ImageField(upload_to="users/%Y/%m/",
                               blank=True, null=True,
                               verbose_name="Фото отзыва")
+
+    class Meta:
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
