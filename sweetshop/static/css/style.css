@@ -182,14 +182,28 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
 
 .filling_example {
     display: grid;
+    grid-gap: 15px;
+    padding-top: 10px;
     width: -250px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .sidenav {
+    grid-column-start: 1;
+    grid-column-end: 2;
     width: 200px;
-    right: 30px;
-    position: fixed;
+    left: 30px;
+}
+
+.sidenav_list {
+    margin: 2px;
+    font-size: 15px;
+    font-family: Comic Sans MS, Tahoma, Arial;
+}
+
+.sidenav_list li {
+    list-style-type: none;
+    line-height: 2;
 }
 
 .dessert_filling_card {
