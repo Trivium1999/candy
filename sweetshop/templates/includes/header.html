@@ -9,10 +9,6 @@
             <li><a href="{% url 'feedback:reviews' %}">Отзывы</a></li>
             <li><a href="{% url 'feedback:about' %}">Обо мне</a></li>
             <li><a href="{% url 'feedback:contact' %}">Контакты</a></li>
-          {% if request.user.is_authenticated %}
-            <li><a href="{% url 'desserts:tags' %}">Теги</a></li>
-          {% endif %}
   </ul>
 </div>
 {% endblock mainmenu %}
-          <!-- <div class="clear"></div> -->

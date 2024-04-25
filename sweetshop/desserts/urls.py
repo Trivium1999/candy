@@ -6,7 +6,6 @@ app_name = 'list'
 
 urlpatterns = [
     path('', Index.as_view(), name='index'), # виды десертов с подписями и фотографиями
-    path('tags/', tags, name='tags'),
     path('examples/<int:id>/', examples, name='example'),
     path('filling/', filling, name='filling')
     # path('create/', CreateWish.as_view(), name='create'),

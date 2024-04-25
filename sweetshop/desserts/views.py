@@ -1,17 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 from .models import Decorations, Fillings, ExampleDecoration, ExampleFilling
 
 
-class Index(TemplateView):
+class Index(ListView):
+    model = Decorations
     template_name = 'desserts/index.html'
-    extra_context = {'decor': Decorations.objects.all()}
-
-
-def tags(request):
-#     # tags = Tag.objects.all()
-    context = {'tags': tags}
-    return render(request, 'desserts/tags.html', context)
 
 
 def examples(request, id):

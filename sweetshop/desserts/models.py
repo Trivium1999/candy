@@ -35,18 +35,20 @@ class Decorations(models.Model):
 class ExampleFilling(models.Model):
     # image = models.ImageField(upload_to='image/fillings/example/', null=True)
     title = models.CharField(max_length=150)
-    fillings = models.ManyToManyField('Fillings', blank=True, related_name='examples')
+    fillings = models.ManyToManyField('Fillings',
+                                      blank=True,
+                                      related_name='examples')
     # slug = models.SlugField(max_lenght=150, unique=True)
 
     class Meta:
-        verbose_name = 'Начинка'
-        verbose_name_plural = 'Начинки'        
+        verbose_name = 'Вид начинки'
+        verbose_name_plural = 'Виды начинок'        
 
     def get_absolute_url(self):
         return reverse('desserts:example', kwargs={'id': self.id})
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return self.title
 
 
 class Fillings(models.Model):
@@ -56,11 +58,11 @@ class Fillings(models.Model):
     
 
     class Meta:
-        verbose_name = 'Пример начинки'
-        verbose_name_plural = 'Примеры начинок'
+        verbose_name = 'Начинка'
+        verbose_name_plural = 'Начинки'
 
     # def get_absolute_url(self):
     #     return reverse('desserts:example', kwargs={'id': self.id})
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return self.title

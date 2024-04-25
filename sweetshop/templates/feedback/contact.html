@@ -1,7 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<br>
 <div class="title_details">{{title}}</div>
 
+<div class="contact_grid">
+
+    <div class="contact">
+        <img src="/static/img/phone.png" alt="Контакт">
+    </div>
+    <span>+7 (999) 917-32-03</span>
+
+
+    <div class="contact">
+        <img src="/static/img/insta.png" alt="Контакт">
+    </div>
+    <a class="contact_text" href="https://instagram.com/missis_vanilka?utm_medium=copy_link">Запрещенная сеть</a>
+
+
+    <div class="contact">
+        <img src="/static/img/map.png" alt="Контакт">
+    </div>
+
+    <div class="contact_text">Иркутский тракт, 204г, Томск</div>
+
+</div>
 {% endblock %}

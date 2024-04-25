@@ -3,7 +3,7 @@
 
 <div class="index_desserts">
 
-{% for dec in decor %}
+{% for dec in object_list %}
 
     <div class="dessert_card">
         <div class="dessert_card__image-wrapper">
@@ -19,66 +19,5 @@
         
     
     {% endfor %}
-
-    <!-- 
-    <div class="dessert_card">
-        <div class="dessert_card__image_wrapper">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=8 %}">
-                <img class="index_image" src="/static/img/honey_cake.jpg">
-            </a>
-        </div>
-        
-        <div class="index_title">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=8 %}">Открытые медовые торты, торты-цифры</a>
-        </div>
-    </div>
-
-    <div class="dessert_card">
-        <div class="dessert_card__image_wrapper">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=9 %}">
-                <img class="index_image" src="/static/img/child_cake.jpg">
-            </a>
-        </div>
-        
-        <div class="index_title">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=9 %}">Детские торты</a>
-        </div>
-    </div>
-
-    <div class="dessert_card">
-        <div class="dessert_card__image_wrapper">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=5 %}">
-                <img class="index_image" src="/static/img/cupcake.jpg">
-            </a>
-        </div>
-        
-        <div class="index_title">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=5 %}">Капкейки</a>
-        </div>
-    </div>
-
-    <div class="dessert_card">
-        <div class="dessert_card__image_wrapper">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=4 %}">
-                <img class="index_image" src="/static/img/desserts.jpg">
-            </a>
-        </div>
-        
-        <div class="index_title">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=4 %}">Десерты</a>
-        </div>
-    </div>
-
-    <div class="dessert_card">
-        <div class="dessert_card__image_wrapper">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=10 %}">
-                <img class="index_image" src="/static/img/gingerbread.jpg">
-            </a>
-        </div>
-
-        <div class="index_title">
-            <a class="index_title_btn" href="{% url 'desserts:example' id=10 %}">Пряники медово-имбирные</a>
-        </div>
-    </div> -->
 </div>
 {% endblock %}
