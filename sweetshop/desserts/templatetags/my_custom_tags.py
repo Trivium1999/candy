@@ -1,6 +1,7 @@
 import desserts.views as views
 from django import template
 from django.utils import timezone
+from ..models import ExampleFilling
 
 
 register = template.Library()
@@ -13,6 +14,6 @@ def year():
     return year
 
 
-# @register.simple_tag()
-# def get_cakes_with_berries():
-#     return Tag.objects.get(id=7)
+@register.simple_tag()
+def get_all_example_filling():
+    return ExampleFilling.objects.all()

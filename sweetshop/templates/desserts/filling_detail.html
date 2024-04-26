@@ -10,8 +10,7 @@
 <div class="filling_example">
     
     {% include 'includes/filling_sidenav.html' %}
-    
-        {% for obj in objects %}
+        {% for obj in objects.fillings.all %}
         <div class="dessert_filling_card">
             <div class="dessert_filling__image-wrapper">
                     <img class="index_img" src="{{ obj.image.url }}">
