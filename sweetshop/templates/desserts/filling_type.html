@@ -4,18 +4,17 @@
 
 
 <div class="title_for_example">
-    <h3>Начинки</h3>
+    {{ objects.title }}
 </div>
 
 <div class="filling_example">
     
     {% include 'includes/filling_sidenav.html' %}
-
-        {% for obj in objects %}
+        {% for obj in objects.fillings.all %}
         <div class="dessert_filling_card">
             <div class="dessert_filling__image-wrapper">
                 <a class="index_title_btn" href="{% url 'desserts:filling_detail' obj.id %}">
-                    <img class="index_img" src="{{ obj.image.url }}"></a>
+                    <img src="{{ obj.image.url }}"></a>
             </div>
     
             <div>   

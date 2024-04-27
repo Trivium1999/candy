@@ -165,7 +165,7 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
 }
 
 .index_title_btn {
-    background-color: #f7cfe9;
+    /* background-color: #f7cfe9; */
     padding: 3px 3px;
     text-decoration: None;
     font-size: 18px;
@@ -175,7 +175,7 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
 }
 
 .index_title_btn:hover {
-    background-color: #f7cfe9;
+    /* background-color: #f7cfe9; */
 }
 
 /* Filling */
@@ -196,12 +196,14 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
 }
 
 .sidenav_list {
-    margin: 2px;
+    background-color: #fdf1f7;
+    border-radius: 15px;
     font-size: 15px;
     font-family: Comic Sans MS, Tahoma, Arial;
 }
 
 .sidenav_list li {
+    margin: 7px;
     list-style-type: none;
     line-height: 2;
 }
@@ -240,6 +242,40 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
     font-family: Comic Sans MS, Tahoma, Arial;
 }
 
+/* Filling_detail */
+
+.filling_details {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-gap: 15px;
+    padding-top: 10px;
+}
+
+.filling_detail_img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.filling_detail_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.filling_title {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: Comic Sans MS, Tahoma, Arial;
+    color: rgb(112, 32, 63);
+    text-shadow: 2px 2px 2px #f5c7df;
+}
+
+.detail_update_delete {
+    text-align: center;
+}
+
 /* Examples */
 
 .example_desserts {
@@ -248,6 +284,7 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
 }
 
 .title_for_example {
+    text-align: center;
     margin-left: 20px;
     margin-bottom: 5px;
     margin-top: 12px;
@@ -374,6 +411,28 @@ ul.mainmenu li.last {float: right; padding: 0 40px 0 0;}
     opacity: 50%;
     width: 100%;
     height: 100%;
+}
+
+/* About */
+
+.about {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-gap: 15px;
+    padding-top: 10px;
+}
+
+.about_img {
+    width: 250px;
+    height: 350px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.about_description {
+    margin-left: 15px;
+    font-size: 16px;
+    font-family: Comic Sans MS, Tahoma, Arial;
 }
 
 /* Пагинация */

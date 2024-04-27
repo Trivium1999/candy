@@ -5,7 +5,7 @@
 <div class="sidenav">
     <ul class="sidenav_list">
        {% for obj in examples %}
-     <li><a href="{% url 'desserts:filling_detail' id=obj.id %}">{{ obj.title }}</li></a>   
+     <li><a href="{% url 'desserts:filling_type' id=obj.id %}">{{ obj.title }}</li></a>   
        {% endfor %}
    </ul>
    </div>

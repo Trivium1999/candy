@@ -18,7 +18,11 @@ def filling(request):
     return render(request, 'desserts/filling.html', {'objects': objects})
 
 
-def filling_detail(request, id):
+def filling_type(request, id):
     objects = ExampleFilling.objects.get(id=id)
-    return render(request, 'desserts/filling_detail.html', {'objects': objects})
+    return render(request, 'desserts/filling_type.html', {'objects': objects})
 
+
+def filling_detail(request, id):
+    objects = Fillings.objects.get(id=id)
+    return render(request, 'desserts/filling_detail.html', {'objects': objects})

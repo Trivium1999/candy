@@ -2,26 +2,22 @@
 
 {% block content %}
 
-
-<div class="title_for_example">
-    {{ objects.title }}
-</div>
-
-<div class="filling_example">
+<div class="filling_details">
     
-    {% include 'includes/filling_sidenav.html' %}
-        {% for obj in objects.fillings.all %}
-        <div class="dessert_filling_card">
-            <div class="dessert_filling__image-wrapper">
-                    <img class="index_img" src="{{ obj.image.url }}">
-            </div>
+    <div class="filling_detail_img">
+      <img src="{{ objects.image.url }}" alt="Фото начинки">
+    </div>
     
-            <div>   
-                <span class="title_filling">{{ obj.title }} </span>
-                <p class="filling_description">{{ obj.description }}</p>
-             </div>    
-            
+    <div>   
+        <span class="filling_title">{{ objects.title }} </span>
+        <p class="filling_description">{{ objects.description }}</p>
+    </div>      
+        {% if request.user.is_authenticated %}
+        <div class="detail_update_delete">
+            <a class="detail_update_delete_btn" href="#">Редактировать</a> 
+            <a class="detail_update_delete_btn" href="#">Удалить</a>
         </div>
-        {% endfor %}
+        {% endif %}
 </div>
+
 {% endblock %}
